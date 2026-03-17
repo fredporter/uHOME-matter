@@ -11,6 +11,10 @@
     "uhome.dvr.cancel",
     "uhome.dvr.list_rules",
     "uhome.dvr.schedule",
+    "uhome.launcher.menu",
+    "uhome.launcher.start",
+    "uhome.launcher.status",
+    "uhome.launcher.stop",
     "uhome.playback.handoff",
     "uhome.playback.status",
     "uhome.tuner.discover",
@@ -61,6 +65,17 @@
       "capabilities": [
         "status",
         "handoff"
+      ]
+    },
+    {
+      "id": "uhome.launcher",
+      "type": "service",
+      "name": "uHOME Launcher",
+      "capabilities": [
+        "status",
+        "start",
+        "stop",
+        "menu"
       ]
     }
   ]
