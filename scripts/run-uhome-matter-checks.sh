@@ -91,15 +91,28 @@ if not isinstance(bridge_definition.get("entities"), list) or not bridge_definit
     raise SystemExit("src/home-assistant-bridge-definition.json entities must be a non-empty list")
 PY
 
-if rg -n '/Users/fredbook/Code|~/Users/fredbook/Code' \
-  "$REPO_ROOT/README.md" \
-  "$REPO_ROOT/docs" \
-  "$REPO_ROOT/src" \
-  "$REPO_ROOT/tests" \
-  "$REPO_ROOT/examples" \
-  "$REPO_ROOT/config"; then
-  echo "private local-root reference found in uHOME-matter" >&2
-  exit 1
+if command -v rg >/dev/null 2>&1; then
+  if rg -n '/Users/fredbook/Code|~/Users/fredbook/Code' \
+    "$REPO_ROOT/README.md" \
+    "$REPO_ROOT/docs" \
+    "$REPO_ROOT/src" \
+    "$REPO_ROOT/tests" \
+    "$REPO_ROOT/examples" \
+    "$REPO_ROOT/config"; then
+    echo "private local-root reference found in uHOME-matter" >&2
+    exit 1
+  fi
+else
+  if grep -R -nE '/Users/fredbook/Code|~/Users/fredbook/Code' \
+    "$REPO_ROOT/README.md" \
+    "$REPO_ROOT/docs" \
+    "$REPO_ROOT/src" \
+    "$REPO_ROOT/tests" \
+    "$REPO_ROOT/examples" \
+    "$REPO_ROOT/config" >/dev/null 2>&1; then
+    echo "private local-root reference found in uHOME-matter" >&2
+    exit 1
+  fi
 fi
 
 echo "uHOME-matter checks passed"
