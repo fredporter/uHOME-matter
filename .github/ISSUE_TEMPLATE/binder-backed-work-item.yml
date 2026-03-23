@@ -22,7 +22,7 @@ body:
         - uDOS-plugin-index
         - uDOS-wizard
         - uDOS-gameplay
-        - uHOME-empire
+        - uDOS-empire
         - uHOME-matter
         - uDOS-dev
         - uDOS-themes

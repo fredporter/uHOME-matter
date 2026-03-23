@@ -16,7 +16,7 @@ Matter and Home Assistant integration extension for the v2 `uHOME` family.
 - base `uHOME-server` runtime ownership
 - shared client-runtime ownership
 - canonical runtime semantics owned by `uDOS-core`
-- optional cloud sync ownership owned by `uHOME-empire`
+- optional cloud sync ownership owned by `uDOS-empire`
 
 ## Spine
 
@@ -40,7 +40,7 @@ The active v2 split is:
 - `uHOME-matter` for Matter, Home Assistant, and local automation extension
   contracts
 - `uHOME-client` plus app repos for shared runtime consumption and UI layers
-- `uHOME-empire` for optional remote sync and container-style workflow
+- `uDOS-empire` for optional remote sync and container-style workflow
   extension
 
 ## Repo Setup Surface

@@ -22,6 +22,6 @@ definition used by `uHOME-server` for bridge metadata and command exposure.
   fully absorbs them
 - `uHOME-client` and app repos consume shared runtime contracts but do not own
   Matter integration
-- `uHOME-empire` owns optional cloud sync, webhook, and container-style remote
+- `uDOS-empire` owns optional cloud sync, webhook, and container-style remote
   workflow lanes
 - `uDOS-core` remains the canonical owner of workflow and command semantics

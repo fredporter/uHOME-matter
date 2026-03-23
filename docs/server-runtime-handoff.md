@@ -28,6 +28,6 @@ base runtime.
 
 ## Empire Preparation
 
-Keeping this local split clean prepares the next v2 `uHOME-empire` pass to own
+Keeping this local split clean prepares the next v2 `uDOS-empire` pass to own
 remote webhook-style automation, queue routing, and zapier-like container or
 job orchestration separately from local bridge execution.
